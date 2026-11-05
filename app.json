@@ -1,0 +1,57 @@
+{
+  "name": "finlit-ai",
+  "description": "AI Agent for Digital Financial Literacy – Powered by IBM Granite & RAG",
+  "version": "1.0.0",
+  "keywords": [
+    "IBM Granite",
+    "watsonx.ai",
+    "RAG",
+    "financial literacy",
+    "UPI",
+    "fraud detection",
+    "multilingual",
+    "LangChain",
+    "ChromaDB",
+    "FastAPI"
+  ],
+  "repository": "https://github.com/anannya-b/ibm.bob",
+  "license": "MIT",
+  "stack": {
+    "backend": "Python 3.10+ / FastAPI",
+    "llm": "IBM Granite (ibm/granite-13b-chat-v2) via ibm-watsonx-ai",
+    "rag": "LangChain + ChromaDB + sentence-transformers/all-MiniLM-L6-v2",
+    "frontend": "Vanilla HTML / CSS / JavaScript",
+    "translation": "deep-translator + langdetect"
+  },
+  "ibm_services": {
+    "model": "ibm/granite-13b-chat-v2",
+    "platform": "IBM watsonx.ai",
+    "cloud": "IBM Cloud Lite"
+  },
+  "features": [
+    "Conversational financial Q&A powered by IBM Granite",
+    "RAG pipeline grounded in India-specific knowledge base",
+    "Real-time scam & fraud detection on every message",
+    "7-language multilingual support (EN/HI/BN/TA/TE/MR/GU)",
+    "50/30/20 Budget Calculator",
+    "EMI Calculator with amortization breakdown",
+    "Interest Rate Explainer with RBI-informed safety assessment",
+    "Session memory (last 5 conversation turns)",
+    "Graceful fallback when LLM is unavailable"
+  ],
+  "endpoints": {
+    "POST /chat": "Main conversational chat endpoint",
+    "POST /budget": "50/30/20 budget calculator",
+    "POST /emi": "EMI calculator",
+    "POST /interest": "Interest rate explainer",
+    "GET /health": "Health check",
+    "DELETE /session/{id}": "Clear conversation history",
+    "GET /rebuild-index": "Rebuild RAG vector index"
+  },
+  "setup": {
+    "install": "pip install -r backend/requirements.txt",
+    "env": "Copy .env.example to backend/.env and fill WATSONX_API_KEY and WATSONX_PROJECT_ID",
+    "run": "cd backend && uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "frontend": "Open frontend/index.html in a browser"
+  }
+}

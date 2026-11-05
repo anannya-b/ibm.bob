@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinLit AI – Digital Financial Literacy Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">💰</div>
+      <div class="logo-text">
+        <span class="logo-title">FinLit AI</span>
+        <span class="logo-sub">Financial Literacy Agent</span>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">LANGUAGE</p>
+      <select id="languageSelect" class="lang-select">
+        <option value="en">🇬🇧 English</option>
+        <option value="hi">🇮🇳 हिंदी (Hindi)</option>
+        <option value="bn">🇧🇩 বাংলা (Bengali)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+      </select>
+    </div>
+
+    <div class="sidebar-section">
+      <p class="sidebar-label">QUICK ACTIONS</p>
+      <button class="quick-btn" onclick="quickAction('How does UPI work and how do I use it safely?')">📱 How to use UPI?</button>
+      <button class="quick-btn" onclick="quickAction('How do I spot a UPI scam or online financial fraud?')">🚨 Spot a Scam</button>
+      <button class="quick-btn" onclick="openModal('budgetModal')">📊 Budget Calculator</button>
+      <button class="quick-btn" onclick="openModal('emiModal')">🏦 EMI Calculator</button>
+      <button class="quick-btn" onclick="quickAction('Explain different interest rates in India for home loans, personal loans and FDs')">📈 Interest Rates</button>
+      <button class="quick-btn" onclick="quickAction('How do I improve my CIBIL credit score?')">⭐ Credit Score</button>
+      <button class="quick-btn" onclick="quickAction('What is the 50/30/20 budgeting rule?')">💡 Budgeting Tips</button>
+      <button class="quick-btn" onclick="quickAction('How do I start investing in mutual funds in India?')">📦 Mutual Funds</button>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="clear-btn" onclick="clearChat()">🗑️ Clear Chat</button>
+      <p class="footer-note">Powered by IBM Granite via watsonx.ai</p>
+    </div>
+  </aside>
+
+  <!-- ===================== MAIN CHAT AREA ===================== -->
+  <main class="chat-main">
+
+    <!-- Top bar -->
+    <header class="chat-header">
+      <div class="header-left">
+        <span class="header-title">💰 FinLit AI</span>
+        <span class="header-sub">Digital Financial Literacy Agent</span>
+      </div>
+      <div class="header-right">
+        <span id="statusDot" class="status-dot online"></span>
+        <span id="statusText" class="status-text">Online</span>
+      </div>
+    </header>
+
+    <!-- Fraud warning banner (hidden by default) -->
+    <div id="fraudBanner" class="fraud-banner hidden">
+      <div class="fraud-banner-header">
+        <span>🚨</span>
+        <strong id="fraudWarningTitle">Potential Scam Detected</strong>
+        <button class="fraud-close" onclick="closeFraudBanner()">✕</button>
+      </div>
+      <p id="fraudWarningMsg"></p>
+      <ul id="fraudTipsList"></ul>
+    </div>
+
+    <!-- Messages area -->
+    <div id="messagesArea" class="messages-area">
+      <!-- Welcome message -->
+      <div class="msg-row bot">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble bot-bubble">
+          <p>👋 Namaste! I'm <strong>FinLit AI</strong>, your digital financial literacy assistant.</p>
+          <p>I can help you with:</p>
+          <ul>
+            <li>📱 Understanding UPI and digital payments</li>
+            <li>🚨 Detecting online scams and frauds</li>
+            <li>📊 Budget planning (50/30/20 rule)</li>
+            <li>🏦 EMI and interest rate calculations</li>
+            <li>💡 Personal finance tips for India</li>
+          </ul>
+          <p>Ask me anything in <strong>English, Hindi, Bengali, Tamil, Telugu, Marathi, or Gujarati!</strong></p>
+          <span class="msg-time" id="welcomeTime"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input area -->
+    <div class="input-area">
+      <div class="input-wrapper">
+        <textarea
+          id="messageInput"
+          class="message-input"
+          placeholder="Ask me about UPI, budgeting, loans, scams, investments…"
+          rows="1"
+          maxlength="2000"
+          onkeydown="handleKeydown(event)"
+          oninput="autoResize(this)"
+        ></textarea>
+        <button id="sendBtn" class="send-btn" onclick="sendMessage()">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <p class="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</p>
+    </div>
+
+  </main>
+
+  <!-- ===================== BUDGET MODAL ===================== -->
+  <div id="budgetModal" class="modal-overlay hidden" onclick="closeModalOnOverlay(event, 'budgetModal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>📊 Budget Calculator</h2>
+        <button class="modal-close" onclick="closeModal('budgetModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Calculate your ideal budget using the <strong>50/30/20 rule</strong> — Needs, Wants, and Savings.</p>
+        <div class="form-group">
+          <label for="incomeInput">Monthly Take-Home Income (₹)</label>
+          <input type="number" id="incomeInput" placeholder="e.g. 60000" min="1" class="modal-input" />
+        </div>
+        <button class="modal-btn" onclick="loadBudgetCalculator()">Calculate Budget</button>
+        <div id="budgetResult" class="result-area hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== EMI MODAL ===================== -->
+  <div id="emiModal" class="modal-overlay hidden" onclick="closeModalOnOverlay(event, 'emiModal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>🏦 EMI Calculator</h2>
+        <button class="modal-close" onclick="closeModal('emiModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Calculate your Equated Monthly Instalment (EMI) for any loan.</p>
+        <div class="form-group">
+          <label for="principalInput">Loan Amount (₹)</label>
+          <input type="number" id="principalInput" placeholder="e.g. 500000" min="1" class="modal-input" />
+        </div>
+        <div class="form-group">
+          <label for="rateInput">Annual Interest Rate (%)</label>
+          <input type="number" id="rateInput" placeholder="e.g. 8.5" min="0" step="0.1" class="modal-input" />
+        </div>
+        <div class="form-group">
+          <label for="tenureInput">Tenure (Months)</label>
+          <input type="number" id="tenureInput" placeholder="e.g. 240 (20 years)" min="1" class="modal-input" />
+        </div>
+        <button class="modal-btn" onclick="loadEMICalculator()">Calculate EMI</button>
+        <div id="emiResult" class="result-area hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+langchain==0.2.6
+langchain-community==0.2.6
+langchain-huggingface==0.0.3
+chromadb==0.5.3
+sentence-transformers==3.0.0
+ibm-watsonx-ai==1.0.10
+deep-translator==1.11.4
+langdetect==1.0.9
+python-dotenv==1.0.1
+pydantic==2.7.4

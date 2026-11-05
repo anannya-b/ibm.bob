@@ -1,0 +1,110 @@
+Online Scam Awareness – Protecting Yourself in the Digital Age
+===============================================================
+
+INTRODUCTION
+------------
+India has seen a dramatic rise in online financial fraud as digital payments have become mainstream. According to RBI and NPCI data, thousands of Indians lose money every day to online scammers. Awareness is your first and most powerful defence. This guide covers the most common scams, how to identify them, and what to do if you become a victim.
+
+MOST COMMON ONLINE SCAMS IN INDIA
+-----------------------------------
+
+1. FAKE UPI COLLECT REQUESTS
+   Scammers send a UPI "collect" or "request" request and tell you to enter your PIN to "receive" money. This is the most widespread UPI scam in India.
+   - Red flag: You need to enter your UPI PIN ONLY when SENDING money, never to receive it
+   - How it works: Fraudster calls claiming to be from a company offering a refund or cashback, asks you to approve a collect request
+   - What happens: Your money is debited, not credited
+   - Prevention: NEVER approve a collect request from someone you do not know
+
+2. KYC UPDATE FRAUD
+   Fraudsters pose as bank or telecom company representatives and claim your KYC (Know Your Customer) is incomplete and your account/SIM will be blocked.
+   - They ask you to share OTP, Aadhaar details, PAN number, or install a remote access app (like AnyDesk or TeamViewer)
+   - Red flag: Banks NEVER ask for OTP or PIN to update KYC
+   - Prevention: Hang up immediately; visit your bank branch directly for KYC updates
+
+3. PHISHING EMAILS AND SMS
+   Fake emails or SMS that look like they are from legitimate banks (SBI, HDFC, ICICI), government agencies (IT department, EPFO), or UPI apps.
+   - They contain links to fake websites that steal your login credentials
+   - Red flag: Misspelled domain names (e.g., sbi-alert-login.com instead of sbi.co.in), urgency ("your account will be closed in 24 hours")
+   - Prevention: Never click links in unsolicited emails or SMS; type bank URLs directly into browser
+
+4. LOTTERY AND PRIZE SCAMS
+   You receive a call, message, or email saying you've won a lottery, iPhone, car, or cash prize.
+   - You're asked to pay a "processing fee", "GST", or "customs charge" to claim the prize
+   - Red flag: No legitimate lottery requires payment to claim a prize
+   - Common variants: WhatsApp lottery (KBC), BSNL lottery, Amazon winner, lucky draw
+   - Prevention: Ignore and block; report to cybercrime.gov.in
+
+5. VISHING (VOICE PHISHING)
+   Scammers call pretending to be bank officers, RBI officials, CBI/police, or company executives.
+   - They create fear (e.g., "your account is under investigation", "you have an arrest warrant") or excitement (fake prize)
+   - They extract OTP, PIN, account details, or trick you into transferring money
+   - Red flag: RBI and banks NEVER call to ask for OTP, PIN, or demand money transfers
+   - Prevention: Hang up and call back on the official number from the bank's website
+
+6. INVESTMENT AND TRADING SCAMS
+   Fraudulent schemes promising guaranteed high returns (20-50% monthly).
+   - Common variants: Fake stock trading apps, fake crypto exchanges, Ponzi schemes, MLM schemes
+   - Scammers use WhatsApp/Telegram groups with fake success stories and manufactured screenshots
+   - Red flag: No legitimate investment guarantees fixed high returns; SEBI-registered advisors do not operate via Telegram
+   - Prevention: Verify with SEBI's investor grievance portal (scores.sebi.gov.in)
+
+7. LOAN APP SCAMS
+   Predatory instant loan apps that charge hidden fees, insane interest rates (sometimes 300%+ APR), and harass borrowers.
+   - They access your contact list and threaten to send embarrassing messages to your contacts
+   - Red flag: RBI-registered NBFCs do not contact contacts; check if the app is RBI-approved
+   - Prevention: Only use loans from banks or RBI-registered NBFCs; list at rbi.org.in
+
+8. FAKE CUSTOMER CARE NUMBERS
+   Scammers place sponsored ads or fake listings on Google with fraudulent customer care numbers for banks, UPI apps, and e-commerce companies.
+   - You call thinking it's the official number, they pretend to help and extract your credentials
+   - Prevention: Always get helpline numbers from the official app or official website, not Google search
+
+9. JOB AND WORK-FROM-HOME SCAMS
+   Fake job offers promising high pay for easy tasks (liking YouTube videos, data entry, etc.).
+   - You're asked to make an initial deposit to "activate" your account, which you never get back
+   - Prevention: Verify companies on LinkedIn; never pay to get a job
+
+10. MATRIMONIAL AND ROMANCE SCAMS
+    Fake profiles on matrimonial sites (Shaadi.com, BharatMatrimony) or social media to build trust and then ask for money.
+    - Usually claim to be NRIs or defense personnel; fabricate emergencies
+    - Prevention: Never send money to someone you have not met in person
+
+RED FLAGS – UNIVERSAL WARNING SIGNS
+-------------------------------------
+🚨 Anyone asking for your OTP, UPI PIN, ATM PIN, or CVV
+🚨 Urgency and pressure tactics ("act now or your account will be blocked")
+🚨 Requests to install remote access apps (AnyDesk, TeamViewer, ScreenShare)
+🚨 Unsolicited calls claiming you've won a prize or offering a refund
+🚨 Requests to scan a QR code to receive money
+🚨 Promises of guaranteed high investment returns
+🚨 Requests to transfer money to "safe" accounts
+🚨 Too-good-to-be-true job offers with upfront payment requirements
+
+WHAT NOT TO DO IF YOU SUSPECT A SCAM
+--------------------------------------
+❌ Do NOT share OTP with anyone, under any circumstances
+❌ Do NOT approve UPI collect requests from unknown numbers
+❌ Do NOT install apps suggested by unknown callers
+❌ Do NOT transfer money to "safe account" as instructed by caller
+❌ Do NOT click on links in SMS/emails from unknown senders
+❌ Do NOT engage with scammers — just hang up and block
+
+HOW TO REPORT CYBER FRAUD
+---------------------------
+1. **National Cyber Crime Portal**: cybercrime.gov.in — file a complaint online
+2. **Helpline 1930**: Call 1930 immediately after fraud (formerly 155260); available 24x7; helps freeze fraudulent transactions
+3. **Bank Helpline**: Call your bank immediately to block your account and initiate a chargeback
+4. **Local Police**: File an FIR at your nearest cyber crime police station
+5. **RBI Complaint**: For bank-related fraud, file at RBI Ombudsman: cms.rbi.org.in
+6. **NPCI Dispute**: Raise a dispute through the UPI app for unauthorized transactions
+
+PROTECTING YOUR DIGITAL IDENTITY
+-----------------------------------
+- Use unique, strong passwords for each financial account
+- Enable two-factor authentication (2FA) on all accounts
+- Regularly check your CIBIL credit report for unauthorized loans
+- Set SMS/email alerts for every bank transaction
+- Do not store banking credentials in browsers
+- Use a separate phone number for financial accounts
+
+Remember: Legitimate institutions — banks, RBI, NPCI, government agencies — will NEVER ask for your PIN, OTP, or password over phone, email, or SMS.

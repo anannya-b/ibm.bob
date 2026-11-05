@@ -1,0 +1,40 @@
+# Environment variables – NEVER commit these
+.env
+backend/.env
+
+# Python virtual environment
+backend/venv/
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ChromaDB vector store (auto-rebuilt on first run)
+backend/chroma_db/
+
+# Hugging Face model cache
+.cache/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
