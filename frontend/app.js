@@ -8,7 +8,10 @@
 // ===========================================================================
 // Configuration
 // ===========================================================================
-const API_BASE = "http://localhost:8000";
+// Auto-detect: use deployed Render URL in production, localhost in development
+const API_BASE = (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
+  ? "http://localhost:8000"
+  : "https://finlit-ai-backend.onrender.com";
 
 // Generate or restore a session ID for conversation continuity
 let sessionId = sessionStorage.getItem("finlit_session_id");
